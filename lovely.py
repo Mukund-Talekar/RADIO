@@ -26,9 +26,7 @@ HELP =""" Radio stations:
 
 3. https://radioindia.net/radio/mirchi98/icecast.audio
 
-4. https://radioindia.net/radio/hungama_evergreen_bollywood/icecast.audio
-
-5. https://radioindia.net/radio/hungamanow/icecast.audio
+4. https://radioindia.net/radio/hungamanow/icecast.audio
 
 ᴛᴏ ꜱᴛᴀʀᴛ ʀᴇᴘʟᴀʏ ᴛᴏ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪᴛʜ ᴄᴏᴍᴍᴀɴᴅ /lradio <Station Number> ʟɪᴋᴇ /lradio 1
 ᴛᴏ ᴇɴᴅ and ꜱᴛᴏᴘ ꜱᴛʀᴇᴀᴍ by /stop ᴄᴏᴍᴍᴀɴᴅ  for any help join @LOVELY_5UPPORT """
