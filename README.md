@@ -16,7 +16,7 @@ SESSION_NAME
 
 
 ## HEROKU
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/lntechnical2/Live-stream-Group-voice-chat-bot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TEAM-LOVELY/RADIO)
 
 ### Get YouTube live stream link 
 #### install youtube_dl
