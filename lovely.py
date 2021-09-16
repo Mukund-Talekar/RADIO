@@ -30,8 +30,8 @@ HELP =""" Radio stations:
 
 5. https://radioindia.net/radio/hungamanow/icecast.audio
 
-ᴛᴏ ꜱᴛᴀʀᴛ ʀᴇᴘʟᴀʏ ᴛᴏ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪᴛʜ ᴄᴏᴍᴍᴀɴᴅ /play <Station Number> ʟɪᴋᴇ /play 1
-ᴛᴏ ᴇɴᴅ and ꜱᴛᴏᴘ ꜱᴛʀᴇᴀᴍ by /stop ᴄᴏᴍᴍᴀɴᴅ """
+ᴛᴏ ꜱᴛᴀʀᴛ ʀᴇᴘʟᴀʏ ᴛᴏ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪᴛʜ ᴄᴏᴍᴍᴀɴᴅ /lradio <Station Number> ʟɪᴋᴇ /lradio 1
+ᴛᴏ ᴇɴᴅ and ꜱᴛᴏᴘ ꜱᴛʀᴇᴀᴍ by /stop ᴄᴏᴍᴍᴀɴᴅ  for any help join @LOVELY_5UPPORT """
 
 
 GROUP_CALLS = {}
@@ -46,7 +46,7 @@ async def help(client,message):
 		await message.reply_text(HELP)
 
 
-@app.on_message(filters.command('play', prefixes='/'))
+@app.on_message(filters.command('lradio', prefixes='/'))
 async def start(client,message):
 	get =await client.get_chat_member(message.chat.id,message.from_user.id)
 	status = get. status
