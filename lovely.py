@@ -18,7 +18,7 @@ app = Client(SESSION_NAME, API_ID, API_HASH)
 
 
 
-HELP =""" Radio stations:
+HELP =""" Lovely Radio stations:
 
 1. https://radioindia.net/radio/hungamanow/icecast.audio
 
