@@ -28,7 +28,7 @@ HELP =""" Lovely Radio stations:
 
 4. https://radioindia.net/radio/hungamanow/icecast.audio
 
-ᴛᴏ ꜱᴛᴀʀᴛ ʀᴇᴘʟᴀʏ ᴛᴏ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪᴛʜ ᴄᴏᴍᴍᴀɴᴅ /lovely <Station Number> ʟɪᴋᴇ /loveley 1
+ᴛᴏ ꜱᴛᴀʀᴛ ʀᴇᴘʟᴀʏ ᴛᴏ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪᴛʜ ᴄᴏᴍᴍᴀɴᴅ /lovely <Station Number> ʟɪᴋᴇ /lovely 1
 ᴛᴏ ᴇɴᴅ and ꜱᴛᴏᴘ ꜱᴛʀᴇᴀᴍ by /stop ᴄᴏᴍᴍᴀɴᴅ  for any help join @LOVELY_5UPPORT """
 
 
