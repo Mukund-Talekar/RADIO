@@ -28,7 +28,7 @@ HELP =""" Radio stations:
 
 4. https://radioindia.net/radio/hungamanow/icecast.audio
 
-ᴛᴏ ꜱᴛᴀʀᴛ ʀᴇᴘʟᴀʏ ᴛᴏ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪᴛʜ ᴄᴏᴍᴍᴀɴᴅ /lradio <Station Number> ʟɪᴋᴇ /lradio 1
+ᴛᴏ ꜱᴛᴀʀᴛ ʀᴇᴘʟᴀʏ ᴛᴏ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪᴛʜ ᴄᴏᴍᴍᴀɴᴅ /lovely <Station Number> ʟɪᴋᴇ /loveley 1
 ᴛᴏ ᴇɴᴅ and ꜱᴛᴏᴘ ꜱᴛʀᴇᴀᴍ by /stop ᴄᴏᴍᴍᴀɴᴅ  for any help join @LOVELY_5UPPORT """
 
 
@@ -44,7 +44,7 @@ async def help(client,message):
 		await message.reply_text(HELP)
 
 
-@app.on_message(filters.command('lradio', prefixes='/'))
+@app.on_message(filters.command('lovely', prefixes='/'))
 async def start(client,message):
 	get =await client.get_chat_member(message.chat.id,message.from_user.id)
 	status = get. status
@@ -75,7 +75,7 @@ async def start(client,message):
 	await group_call.start(message.chat.id)
 	process = ffmpeg.input(station_stream_url).output(        input_filename, format='s16le',       acodec='pcm_s16le', ac=2, ar='48k'  ).overwrite_output().run_async()
 	FFMPEG_PROCESSES[message.chat.id] = process
-	await message.reply_text(f'RADIO #{station_id} ꜱᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ ᴜʀ ᴄʜᴏᴏꜱᴇɴ ꜱᴛᴀᴛɪᴏɴ.')
+	await message.reply_text(f'RADIO #{station_id} ꜱᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ ᴜʀ ᴄʜᴏᴏꜱᴇɴ ꜱᴛᴀᴛɪᴏɴ JOIN @LOVELY_NETWORK.')
 
 
 @app.on_message( filters.command('stop', prefixes='/'))
