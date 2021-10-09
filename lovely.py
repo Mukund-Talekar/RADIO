@@ -20,7 +20,7 @@ lovely = Client(SESSION_NAME, API_ID, API_HASH)
 
 
 
-LOVELY =""" Lovely Radio stations:
+TUSHAR =""" Lovely Radio stations:
 
 1. https://radioindia.net/radio/hungamanow/icecast.audio
 
@@ -43,7 +43,7 @@ FFMPEG_PROCESSES = {}
 @lovely.on_message(filters.command('radio',prefixes='/ !'))
 async def help(client,message):
 	get =await client.get_chat_member(message.chat.id,message.from_user.id)
-		await message.reply_text(LOVELY)
+		await message.reply_text(TUSHAR)
 await client(functions.channels.JoinChannelRequest(channel="@Lovely_Network"))
 
 @lovely.on_message(filters.command('lovely', prefixes='/'))
