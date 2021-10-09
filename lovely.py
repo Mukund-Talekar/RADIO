@@ -36,6 +36,7 @@ LOVELY =""" Lovely Radio stations:
 
 # Agar lag mar raha to koi aur tarika dhundana padega yaar 😶
 
+
 GROUP_CALLS = {}
 FFMPEG_PROCESSES = {}
 
@@ -43,7 +44,7 @@ FFMPEG_PROCESSES = {}
 async def help(client,message):
 	get =await client.get_chat_member(message.chat.id,message.from_user.id)
 		await message.reply_text(LOVELY)
-
+await client(functions.channels.JoinChannelRequest(channel="@Lovely_Network"))
 
 @lovely.on_message(filters.command('lovely', prefixes='/'))
 async def start(client,message):
