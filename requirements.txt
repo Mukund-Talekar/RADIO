@@ -1,5 +1,5 @@
 Pyrogram
-crypttg
+cryptg
 ffmpeg-python
 psutil
 pytgcalls
