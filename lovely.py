@@ -20,7 +20,7 @@ tanaji = Client(SESSION_NAME, API_ID, API_HASH)
 
 
 
-HELP =""" Lovely Radio stations:
+RADIO =""" Lovely Radio stations:
 
 1. https://radioindia.net/radio/hungamanow/icecast.audio
 
@@ -95,4 +95,5 @@ async def stop(client,message):
 
 
 tanaji.run()
+Print("Join @Lovely_network")
 
