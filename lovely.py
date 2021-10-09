@@ -13,14 +13,14 @@ API_HASH = os.environ.get("API_HASH","")
 SESSION_NAME = os.environ.get("SESSION_NAME","")
 
 
-tanaji = Client(SESSION_NAME, API_ID, API_HASH)
+lovely = Client(SESSION_NAME, API_ID, API_HASH)
 
 
 #Ek group me chalaoge to lag nhi marega samaje 👀.
 
 
 
-TANAJI =""" Lovely Radio stations:
+LOVELY =""" Lovely Radio stations:
 
 1. https://radioindia.net/radio/hungamanow/icecast.audio
 
@@ -39,13 +39,13 @@ TANAJI =""" Lovely Radio stations:
 GROUP_CALLS = {}
 FFMPEG_PROCESSES = {}
 
-@tanaji.on_message(filters.command('radio',prefixes='/ !'))
+@lovely.on_message(filters.command('radio',prefixes='/ !'))
 async def help(client,message):
 	get =await client.get_chat_member(message.chat.id,message.from_user.id)
-		await message.reply_text(TANAJI)
+		await message.reply_text(LOVELY)
 
 
-@tanaji.on_message(filters.command('lovely', prefixes='/'))
+@lovely.on_message(filters.command('lovely', prefixes='/'))
 async def start(client,message):
 	get =await client.get_chat_member(message.chat.id,message.from_user.id)
 		input_filename = f'radio-{message.chat.id}.raw'
@@ -76,7 +76,7 @@ async def start(client,message):
 	await message.reply_text(f'RADIO #{station_id} ꜱᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ ᴜʀ ᴄʜᴏᴏꜱᴇɴ ꜱᴛᴀᴛɪᴏɴ JOIN @LOVELY_NETWORK.')
 
 
-@tanaji.on_message( filters.command('stop', prefixes='/'))
+@lovely.on_message( filters.command('stop', prefixes='/'))
 async def stop(client,message):
 	get =await client.get_chat_member(message.chat.id,message.from_user.id)
 	   group_call = GROUP_CALLS.get(message.chat.id)
@@ -88,9 +88,9 @@ async def stop(client,message):
 	   
 
 
+# REPO EDIT KR RAHE HO KRO 👀.
 
 
-
-tanaji.run()
+lovely.run()
 Print("Join @Lovely_network")
 
