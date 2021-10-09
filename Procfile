@@ -1,1 +1,1 @@
-tanaji: python3 lovely.py
+tushar: python3 lovely.py
