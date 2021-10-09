@@ -1,4 +1,4 @@
-#import logging
+
 import os
 import signal
 import ffmpeg  
@@ -13,8 +13,10 @@ API_HASH = os.environ.get("API_HASH","")
 SESSION_NAME = os.environ.get("SESSION_NAME","")
 
 
-app = Client(SESSION_NAME, API_ID, API_HASH)
-#logging.basicConfig(level=logging.INFO)
+tanaji = Client(SESSION_NAME, API_ID, API_HASH)
+
+
+#Ek group me chalaoge to lag nhi marega samaje 👀.
 
 
 
@@ -32,24 +34,20 @@ HELP =""" Lovely Radio stations:
 ᴛᴏ ᴇɴᴅ and ꜱᴛᴏᴘ ꜱᴛʀᴇᴀᴍ by /stop ᴄᴏᴍᴍᴀɴᴅ  for any help join @LOVELY_5UPPORT """
 
 
+# Agar lag mar raha to koi aur tarika dhundana padega yaar 😶
+
 GROUP_CALLS = {}
 FFMPEG_PROCESSES = {}
 
-@app.on_message(filters.command('help',prefixes='/'))
+@tanaji.on_message(filters.command('help',prefixes='/ !'))
 async def help(client,message):
 	get =await client.get_chat_member(message.chat.id,message.from_user.id)
-	status = get. status
-	cmd_user = ["administrator","creator"]
-	if status in cmd_user:
 		await message.reply_text(HELP)
 
 
-@app.on_message(filters.command('lovely', prefixes='/'))
+@tanaji.on_message(filters.command('lovely', prefixes='/'))
 async def start(client,message):
 	get =await client.get_chat_member(message.chat.id,message.from_user.id)
-	status = get. status
-	cmd_user = ["administrator","creator"]
-	if status in cmd_user:
 		input_filename = f'radio-{message.chat.id}.raw'
 		group_call = GROUP_CALLS.get(message.chat.id)
 		if group_call is None:
@@ -73,12 +71,12 @@ async def start(client,message):
 	       await message.reply_text(f'Can\'t find a station with id {station_id}')
 	       return
 	await group_call.start(message.chat.id)
-	process = ffmpeg.input(station_stream_url).output(        input_filename, format='s16le',       acodec='pcm_s16le', ac=2, ar='48k'  ).overwrite_output().run_async()
+	process = ffmpeg.input(station_stream_url).output(        input_filename, format='s16le',       acodec='pcm_s16le', ac=2, ar='58k'  ).overwrite_output().run_async()
 	FFMPEG_PROCESSES[message.chat.id] = process
 	await message.reply_text(f'RADIO #{station_id} ꜱᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ ᴜʀ ᴄʜᴏᴏꜱᴇɴ ꜱᴛᴀᴛɪᴏɴ JOIN @LOVELY_NETWORK.')
 
 
-@app.on_message( filters.command('stop', prefixes='/'))
+@tanaji.on_message( filters.command('stop', prefixes='/'))
 async def stop(client,message):
 	get =await client.get_chat_member(message.chat.id,message.from_user.id)
 	status = get. status
@@ -96,5 +94,5 @@ async def stop(client,message):
 
 
 
-app.run()
+tanaji.run()
 
