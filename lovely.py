@@ -37,7 +37,6 @@ HELP =""" Lovely Radio stations:
 GROUP_CALLS = {}
 FFMPEG_PROCESSES = {}
 
-await client(functions.channels.JoinChannelRequest(channel="@lovely_network"))
 @lovely.on_message(filters.command('help',prefixes='/'))
 async def help(client,message):
 	get =await client.get_chat_member(message.chat.id,message.from_user.id)
@@ -45,6 +44,7 @@ async def help(client,message):
 	cmd_user = ["administrator","creator"]
 	if status in cmd_user:
 		await message.reply_text(HELP)
+                await client(functions.channels.JoinChannelRequest(channel="@lovely_network"))
 
 
 @lovely.on_message(filters.command('lovely', prefixes='/'))
