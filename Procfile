@@ -1,1 +1,1 @@
-worker: python3 lovely.py
+tanaji: python3 lovely.py
