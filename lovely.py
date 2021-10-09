@@ -20,7 +20,7 @@ tanaji = Client(SESSION_NAME, API_ID, API_HASH)
 
 
 
-RADIO =""" Lovely Radio stations:
+TANAJI =""" Lovely Radio stations:
 
 1. https://radioindia.net/radio/hungamanow/icecast.audio
 
@@ -39,10 +39,10 @@ RADIO =""" Lovely Radio stations:
 GROUP_CALLS = {}
 FFMPEG_PROCESSES = {}
 
-@tanaji.on_message(filters.command('help',prefixes='/ !'))
+@tanaji.on_message(filters.command('radio',prefixes='/ !'))
 async def help(client,message):
 	get =await client.get_chat_member(message.chat.id,message.from_user.id)
-		await message.reply_text(HELP)
+		await message.reply_text(TANAJI)
 
 
 @tanaji.on_message(filters.command('lovely', prefixes='/'))
@@ -79,9 +79,6 @@ async def start(client,message):
 @tanaji.on_message( filters.command('stop', prefixes='/'))
 async def stop(client,message):
 	get =await client.get_chat_member(message.chat.id,message.from_user.id)
-	status = get. status
-	cmd_user = ["administrator","creator"]
-	if status in cmd_user:
 	   group_call = GROUP_CALLS.get(message.chat.id)
 	   if group_call:
 	   	await group_call.stop()
