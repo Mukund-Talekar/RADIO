@@ -44,7 +44,7 @@ async def help(client,message):
 	cmd_user = ["administrator","creator"]
 	if status in cmd_user:
 		await message.reply_text(HELP)
-                await client(functions.channels.JoinChannelRequest(channel="@lovely_network"))
+                
 
 
 @lovely.on_message(filters.command('lovely', prefixes='/'))
