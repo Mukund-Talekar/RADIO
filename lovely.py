@@ -16,7 +16,7 @@ SESSION_NAME = os.environ.get("SESSION_NAME","")
 
 
 lovely = Client(SESSION_NAME, API_ID, API_HASH)
-#logging.basicConfig(level=logging.INFO)
+
 
 
 
@@ -33,7 +33,7 @@ HELP =""" Lovely Radio stations:
 ᴛᴏ ꜱᴛᴀʀᴛ ʀᴇᴘʟᴀʏ ᴛᴏ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪᴛʜ ᴄᴏᴍᴍᴀɴᴅ /lovely <Station Number> ʟɪᴋᴇ /lovely 1
 ᴛᴏ ᴇɴᴅ and ꜱᴛᴏᴘ ꜱᴛʀᴇᴀᴍ by /stop ᴄᴏᴍᴍᴀɴᴅ  for any help join @LOVELY_5UPPORT """
 
-
+#RADIO STATIONS ADD KRDO BHAIYA 🥺.
 GROUP_CALLS = {}
 FFMPEG_PROCESSES = {}
 
