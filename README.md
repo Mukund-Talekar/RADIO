@@ -6,11 +6,11 @@ SUPPORTS 500 GROUPS NO NEED OF BOT 😉
 
 
 
-## Requirements
+## VARS
 
 - Telegram API_ID , 
-API_HASH and
-SESSION_NAME
+- API_HASH 
+- SESSION_NAME
 
 
 
