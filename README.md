@@ -16,7 +16,7 @@ SESSION_NAME
 
 
 ## HEROKU
-[![Deploy](https://www.herokucdn.com/deploy/button=black.svg)](https://heroku.com/deploy?template=https://github.com/TEAM-LOVELY/RADIO)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TEAM-LOVELY/RADIO)
 
 
 ## 🚨Warning 
